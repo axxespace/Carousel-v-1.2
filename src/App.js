@@ -24,9 +24,10 @@ const Element = styled.div.attrs( props => ({
   display: grid;
   height: 100%;
   grid-template-columns: repeat(20, 1fr);
+  animation-name: ${props => animation(props.left, props.leftOn100Percents, props.shouldIUseAnim)};
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-name: ${props => animation(props.left, props.leftOn100Percents, props.shouldIUseAnim)};
+  transition-timing-function: cubic-bezier(.17,.67,.83,.67);
 `
 
 
